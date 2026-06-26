@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.time-box {
+    font-size: 30px;
+    padding: 6px;
+}
+
+/* Media query for iPhone SE and similar small screens */
+@media screen and (min-width: 375px) and (min-width: 667px) {
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
+  font-family: Arial, sans-serif;
+}
+
+    body {
+        background-color: rgb(241, 188, 228);  /* Your test value */
+    }
+    
+    /* Optional: adjust other elements for small screens */
+    .time-box {
+        padding: 3px;
+        font-size: 128px;
+
+    }
+    
+    h1 {
+        font-size: 64px;
+    }
+}
