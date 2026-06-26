@@ -1,42 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
+/* Apply font everywhere, but leave backgrounds alone */
+* {
+    font-family: "Merriweather", Arial, sans-serif;
+    color: rgb(100, 57, 89);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Set the default background color ONLY on the body */
+body {
+    background-color: rgb(188, 209, 241); /* Default Light Blue */
+    min-height: 100vh;
+}
+
+/* Base styles for Desktop / Large screens */
 .countdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
 }
 
 .time-box {
-    font-size: 30px;
-    padding: 6px;
+    font-size: 40px;
+    padding: 10px;
 }
 
-/* Media query for iPhone SE and similar small screens */
-@media screen and (min-width: 375px) and (min-width: 667px) {
-
-.countdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 55vh;
-  font-family: Arial, sans-serif;
+h1 {
+    font-size: 40px;
+    margin-top: 40px;
 }
 
+/* --- MOBILE STYLES (Screens 667px wide or SMALLER) --- */
+@media screen and (max-width: 667px) {
     body {
-        background-color: rgb(241, 188, 228);  /* Your test value */
+        background-color: rgb(241, 188, 228);  /* Turns pink seamlessly */
+    }
+
+    .countdown-container {
+        height: 60vh;
     }
     
-    /* Optional: adjust other elements for small screens */
+    /* 128px is too massive for an iPhone SE, let's make it fit nicely */
     .time-box {
-        padding: 3px;
-        font-size: 128px;
-
+        padding: 5px;
+        font-size: 32px; 
     }
     
     h1 {
-        font-size: 64px;
+        font-size: 48px;
     }
 }
